@@ -1,0 +1,221 @@
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #781313, #1a3759); /* Gradient background */
+    color: #950c00;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #13304c;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar h2 {
+    color: #fff;
+    font-size: 24px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #7fc5cd;
+}
+
+/* Container Styles */
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Header Styles */
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #214d79;
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #6c757d;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* Form Styles */
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+label {
+    text-align: left;
+    font-weight: bold;
+    color: #214d79;
+}
+
+input[type="text"], input[type="email"], input[type="password"], select {
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+    width: 100%;
+    font-size: 16px;
+}
+
+input:focus, select:focus {
+    border-color: #214d79;
+    outline: none;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #214d79;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #13304c;
+    transform: translateY(-3px);
+}
+
+/* Container for the buttons */
+.action-buttons {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 15px; /* Space between buttons */
+    justify-content: center; /* Center the buttons */
+    margin-top: 20px;
+}
+
+/* Common Button Styles */
+.custom-button {
+    padding: 12px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    background-color: #214d79; /* Dark blue background */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.custom-button:hover {
+    background-color: #1766a3; /* Slightly lighter blue on hover */
+    transform: scale(1.05); /* Slightly larger button on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+}
+
+/* Logout Button with a Different Style */
+.custom-button-logout {
+    background-color: #c82333; /* Red for logout button */
+    color: white;
+}
+
+.custom-button-logout:hover {
+    background-color: #660d16; /* Darker red on hover */
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Seat Container Styles */
+.seat-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Seat Box Styles */
+.seat {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.seat.available {
+    background-color: #248536;
+    color: white;
+}
+
+.seat.booked {
+    background-color: #8c2a2a;
+    color: white;
+    cursor: not-allowed;
+}
+
+.seat.selected {
+    border: 4px solid #0151ff;
+    background-color: #f6ff98;
+    color: #0151ff;
+}
+
+.seat:hover:not(.booked) {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #13304c;
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    font-size: 14px;
+}
