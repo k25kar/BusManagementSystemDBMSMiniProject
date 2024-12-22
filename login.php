@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class="container">
         <header>
-            <h1>Login</h1>
+            <h1>Login:</h1>
         </header>
         <?php if (!empty($error_message)): ?>
             <p style="color: red;"><?= $error_message; ?></p>
